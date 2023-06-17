@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "../styles/detail.css";
+import ToggleButton from "./Toggle";
 
 const Task = (props) => {
   const [view, setView] = useState(false);
@@ -17,6 +18,7 @@ const Task = (props) => {
         </p>
       </div>
       <div className="to__important">
+        <ToggleButton />
         <i
           class="ri-delete-bin-6-line"
           onClick={() => setView(!view)}

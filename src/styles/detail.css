@@ -30,11 +30,27 @@
 }
 
 .to__important {
-  width: 15px;
-  height: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  height: auto;
+}
+
+.to__important button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  background-color: #f68084;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .to__important i {
+  padding-top: 10px;
   font-size: 1.2rem;
   color: #f68084;
   cursor: pointer;
