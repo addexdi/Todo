@@ -1,0 +1,268 @@
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user .user--initials {
+  align-items: center;
+  justify-content: center;
+  background: #dc5084;
+  border-radius: 50%;
+  padding: 0.8rem;
+  margin-right: 15px;
+}
+
+.user .user--initials p {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.username--nickname p {
+  font-size: 15px;
+}
+
+.username--nickname .nickname {
+  font-weight: 600;
+  margin-left: 0;
+}
+
+.line {
+  height: 1px;
+  margin: 1rem 0;
+  background-color: #020c16;
+}
+
+.list--type .todo--type {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  height: 50px;
+  padding-left: 0.5rem;
+  transition: 0.1s;
+}
+
+.list--type .todo--type i {
+  margin-right: 1.5rem;
+}
+
+.list--type .todo--type:hover {
+  background: #e3f6f54e;
+  border-radius: 10px;
+  color: #020c16;
+  transform: scale(1.1);
+}
+
+.list--type .todo--type .del__btn {
+  display: none;
+}
+
+.list--type .todo--type .prompt{
+  display: none;
+}
+
+.added--task {
+  box-sizing: border-box;
+  height: 22%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 3rem;
+}
+
+.added--task .task--added {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas:
+    "a b c d e f g";
+  font-size: 18px;
+  height: 50px;
+  padding: 0 0.5rem;
+  width: 95%;
+}
+
+.added--task .task--added i {
+  margin-right: 1.5rem;
+  grid-area: a;
+}
+
+.added--task .task--added:hover {
+  background: #e3f6f54e;
+  border-radius: 10px;
+  color: #01070d;
+}
+
+.added--task .task--added .del__btn {
+  cursor: pointer;
+  color: #f68084;
+  font-size: 1.2rem;
+  grid-area: g;
+}
+
+.added--task .task--added .prompt{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  right: 20px;
+  margin-top: 35px;
+  font-size: 14px;
+  color: white;
+  background: #dc5084;
+  z-index: 20;
+  padding: 0.4rem;
+}
+
+.added--task .task--added .prompt .select__btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.added--task .task--added .prompt .select__btn button{
+  padding: 0.2rem;
+  border: none;
+  background: #022f5c;
+  color: wheat;
+  cursor: pointer;
+}
+
+.new-n-settings {
+  position: fixed;
+  bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  width: 23%;
+}
+
+.new--list {
+  display: flex;
+  height: 45px;
+  width: 100%;
+  align-items: center;
+  padding: 0 0 0 0.5rem;
+  background: #e3f6f54e;
+  border-radius: 10px;
+  color: #020c16a0;
+}
+
+.new--list i {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.new-list-input {
+  width: 70%;
+  height: 25px;
+  border: none;
+  background: #e3f6f500;
+  font-size: 20px;
+  color: #eee0e0;
+  padding: 0.5rem;
+}
+
+.new-list-input:focus {
+  outline: none;
+}
+
+.new-list-input::placeholder {
+  color: #124d8887;
+}
+
+.create__list {
+  width: 30%;
+  height: 45px;
+  background: #124d8887;
+  border: none;
+  color: #eee0e0;
+  border-radius: 10px;
+  box-shadow: -3px 0px gray;
+}
+
+.create__list:hover {
+  background: #da6569;
+  color: #07325d;
+}
+
+@media only screen and (max-width: 1100px) {
+  .username--nickname p {
+    font-size: 9.5px;
+  }
+
+  .user .user--initials {
+    padding: 0.6rem;
+  }
+
+  .user .user--initials p {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .new--list i {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  @keyframes flowIn {
+    0% {
+      transform: translateX(-13%);
+      transition: all 0.4s ease-in-out;
+    }
+
+    100% {
+      transform: translateX(0);
+      transition: all 0.4s ease-in-out;
+    }
+  }
+
+  .action__container {
+    background: #193756;
+    width: 60%;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-left: 21px;
+    padding: 25px;
+    animation-duration: .9s;
+    animation-name: flowIn;
+    animation-iteration-count: 1;
+  }
+
+  .added--task {
+    display: none;
+  }
+
+  .new-n-settings {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .username--nickname p {
+    font-size: 14px;
+  }
+
+  .username--nickname .username{
+    font-size: 12px;
+  }
+
+  .list--type .todo--type{
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .list--type div {
+    font-size: 12px;
+  }
+
+  .list--type div i {
+    margin-right: 0.8rem;
+  }
+
+  .user .user--initials {
+    margin-right: 3px;
+  }
+}
